@@ -1,0 +1,31 @@
+.filterPanel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.5fr);
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid #e4e6df;
+  border-bottom: 1px solid #e4e6df;
+}
+.searchRow, .categoryArea { display: grid; align-content: start; gap: 8px; }
+.searchLabel { color: #59615c; font-size: 0.76rem; font-weight: 750; }
+.searchControl { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.searchIcon { color: #87704c; font-size: 1.25rem; }
+.searchInput {
+  width: 100%; min-width: 0; border: 0; outline: 0; background: transparent;
+  color: #202923; font: inherit; padding: 8px 0;
+}
+.searchInput::placeholder { color: #98a09a; }
+.clearButton { border: 0; padding: 5px 8px; color: #52635a; background: #edf0e8; font-size: 0.75rem; white-space: nowrap; }
+.categoryList { display: flex; flex-wrap: wrap; gap: 7px; }
+.categoryButton {
+  display: inline-flex; align-items: center; gap: 8px; border: 1px solid #dfe3db;
+  border-radius: 999px; padding: 6px 11px; color: #536057; background: transparent;
+  font-size: 0.78rem; text-transform: capitalize;
+}
+.categoryButton span { color: #8b958d; font-variant-numeric: tabular-nums; }
+.categoryButton:hover { border-color: #8a9b83; background: #f1f3ec; }
+.selected, .selected:hover { border-color: #244d3d; color: #fff; background: #244d3d; }
+.selected span { color: #d6e5d9; }
+@media (max-width: 720px) {
+  .filterPanel { grid-template-columns: 1fr; gap: 16px; }
+}
